@@ -1,0 +1,207 @@
+
+
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        background-image: url(img/darkwood.png);
+        background-size: 500px;
+        color: #fceaff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+ 
+    #container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    #container a {
+        color: #2600ff;
+        font-weight: bold;
+    }
+
+  
+    #flex {
+        display: flex;
+    }
+
+    aside {
+        background-color: #24242490;
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #3d3d3d;
+      
+    }
+    
+    h2,h3,p{
+        padding: 0px;
+        margin: 0px;
+    }
+    p{
+        font-size: 15px;
+    }
+ul{
+    list-style: square;
+}
+
+    main {
+        background-color: #29292974;
+        border: 1px solid #3d3d3d;
+        flex: 1;
+        padding: 20px;
+        order: 2;
+    }
+
+    */ #leftSidebar {
+        order: 1;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    footer {
+        background-color: #000000;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: #2f00ff;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    strong {
+        color: #ED64F5;
+    }
+
+    .box {
+        background-color: #00000091;
+        border: 2px solid #858585;
+        padding: 10px;
+    }
+
+
+    .marquee {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .15);
+            background-color: #545454;
+            overflow: hidden;
+            position: relative;
+            height: 30px;
+            width: 100%;
+            white-space: nowrap;
+            text-align: center;
+
+        }
+
+        .marquee p {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            margin: 0;
+            /* line-height: 50px; */
+            text-align: center;
+            /* Start off the right edge */
+            transform: translateX(100%);
+            /* Animate to the left */
+            animation: scroll-left 20s linear infinite;
+            color: black;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+       img:hover{
+            color: #424242; 
+          -webkit-transition: all .3s ease-in;
+          -moz-transition: all .3s ease-in;
+          -ms-transition: all .3s ease-in;
+          -o-transition: all .3s ease-in;
+          transition: all .3s ease-in;
+          opacity: 1;
+          transform: scale(1.15);
+          -ms-transform: scale(1.15); /* IE 9 */
+          -webkit-transform: scale(1.15); /* Safari and Chrome */
+        
+        }
+
+        .type-a .b {width: 50%; float:left;}
+        .type-a .a {width:100%; float:left;}
+        .type-a .c {width: 50%; float:left;}
+
+        table, th, td {
+            border: 1px solid;
+          }
+
+          /* tr:nth-child(even) {background-color: #f2f2f217;} */
+        .otherProfile{
+    background-color: #00000091;
+    border: 2px solid #858585;
+    padding: 10px;
+        }
+          .smallprofile{
+            display: inline flex;
+            justify-content: space-evenly;
+            width: 100px; 
+            height: 100px;
+            border: 1px solid white;
+          }
+
+          .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+          }
+          
+       
+   
+
+    @media only screen and (max-width: 800px) {
+        #flex {
+            flex-wrap: wrap;
+        }
+
+        aside {
+            width: 100%;
+        }
+
+        /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+        main {
+            order: 1;
+        }
+
+        #leftSidebar {
+            order: 2;
+        }
+
+        #rightSidebar {
+            order: 3;
+        }
+
+        #navbar ul {
+            flex-wrap: wrap;
+        }
+    }
+</style>
